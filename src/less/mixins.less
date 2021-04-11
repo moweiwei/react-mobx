@@ -1,0 +1,47 @@
+.clearfix {
+  zoom: 1;
+
+  &:after {
+    content: '.';
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+.nowrap {
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.break-all {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.break-word {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
