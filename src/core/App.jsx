@@ -7,7 +7,6 @@ import { renderRoutes } from 'utils/router.config'
 
 import RootStore from 'stores/root'
 
-import 'antd/dist/antd.css'
 import 'less/main.less'
 
 import routes from './routes'

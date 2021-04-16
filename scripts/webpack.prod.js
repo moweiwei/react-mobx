@@ -62,7 +62,14 @@ const config = smp.wrap({
             loader: 'postcss-loader',
             options: baseConfig.postCssOptions,
           },
-          'less-loader',
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              }
+            }
+          }
         ],
       },
       {

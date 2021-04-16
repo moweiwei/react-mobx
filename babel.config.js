@@ -32,13 +32,27 @@ module.exports = {
           transform: 'components/Base/${member}',
           preventFullImport: true,
         },
-        'components/Inputs': {
-          transform: 'components/Inputs/${member}',
-          preventFullImport: true,
-        },
       },
     ],
     'recharts',
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "lib",
+        "style": true
+      },
+      "antd"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "@ant-design/icons",
+        "libraryDirectory": "es/icons",
+        "camel2DashComponentName": false
+      },
+      "@ant-design/icons"
+    ]
   ],
   env: {
     production: {

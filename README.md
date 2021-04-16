@@ -13,6 +13,7 @@ Feature
 - eslint
 - prettier
 - pre-commit, lint-staged
+- commitlint
 
 Install yarn with npm:
 
