@@ -26,12 +26,12 @@ const getLocales = {
 }
 
 const init = async () => {
-  const userLang = getBrowserLang()
-  if (userLang && cookie('lang') !== userLang) {
-    cookie('lang', userLang)
+  const currentLang = getBrowserLang()
+  if (currentLang && cookie('lang') !== currentLang) {
+    cookie('lang', currentLang)
   }
 
-  if (userLang === 'zh') {
+  if (currentLang === 'zh') {
     moment.locale('zh', {
       relativeTime: {
         s: '1秒',
@@ -61,7 +61,7 @@ const init = async () => {
     })
   )
 
-  return { locales }
+  return { locales, currentLang }
 }
 
 const t = (key, options) => {
