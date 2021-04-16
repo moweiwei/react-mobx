@@ -1,7 +1,9 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import LocaleProvider from 'components/LocaleProvider'
-import { ConfigProvider, Spin, notification } from 'antd'
+import { ConfigProvider, notification } from 'antd'
+import PageLoading from 'components/PageLoading'
+
 import zhCN from 'antd/lib/locale/zh_CN'
 import enUS from 'antd/lib/locale/en_US'
 
@@ -42,7 +44,7 @@ const render = async component => {
   const locale = currentLang === 'zh' ? zhCN : enUS
 
   ReactDOM.render(
-    <Suspense fallback={<Spin className="page-loading" />}>
+    <Suspense fallback={<PageLoading className="page-loading" />}>
       <ConfigProvider locale={locale}>
         <LocaleProvider locales={locales} localeKey="lang" ignoreWarnings>
           {component}
