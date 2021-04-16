@@ -86,6 +86,22 @@ module.exports = {
     'prefer-destructuring': 0,
     'max-classes-per-file': 0,
     'prefer-promise-reject-errors': 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "^@/",
+          "^src",
+          "^layouts",
+          "^components",
+          "^stores",
+          "^utils",
+          "^pages",
+          "^core",
+          "^asset",
+        ]
+      }
+    ],
   },
   parserOptions: {
     ecmaFeatures: {

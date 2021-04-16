@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "src/*": ["./src/*"],
+      "asset/*": ["./src/asset/*"],
+      "image/*": ["./src/asset/image/*"],
+      "core/*": ["./src/core/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "components/*": ["./src/components/*"],
+      "pages/*": ["./src/pages/*"],
+      "utils/*": ["./src/utils/*"],
+      "stores/*": ["./src/stores/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
