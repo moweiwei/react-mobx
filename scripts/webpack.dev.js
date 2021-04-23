@@ -128,6 +128,12 @@ const config = {
     historyApiFallback: true,
     host: '0.0.0.0',
     port: 8088,
+    proxy: {
+      '/api': {
+        target: 'http://rap2api.taobao.org/app/mock/252252',
+        changeOrigin: true,
+      }
+    }
   },
 }
 

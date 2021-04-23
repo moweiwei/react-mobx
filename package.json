@@ -4,6 +4,7 @@
   "private": true,
   "license": "AGPL-3.0",
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@babel/polyfill": "^7.12.1",
     "antd": "^4.15.1",
     "classnames": "^2.2.5",
