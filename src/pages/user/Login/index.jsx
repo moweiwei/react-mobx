@@ -10,17 +10,25 @@ import styles from './index.less'
 @observer
 export default class Login extends Component {
   state = {
-    formData: {},
     isSubmmiting: false,
   }
 
-  handleSubmit = data => {
+  onFinish = data => {
     // eslint-disable-next-line no-console
     console.log('data', data)
+    this.props.rootStore.login(data).then(resp => {
+      this.setState({ isSubmmiting: false })
+      this.props.rootStore.routing.push('/demo')
+      if (resp.status !== 200) {
+        this.setState({
+          errorMessage: resp.message,
+        })
+      }
+    })
   }
 
   render() {
-    const { formData, isSubmmiting } = this.state
+    const { isSubmmiting } = this.state
 
     return (
       <div className={styles.container}>
@@ -33,7 +41,7 @@ export default class Login extends Component {
         <div className={styles.right}>
           <div className={styles.login}>
             <div className={styles.header}>{t('Log In')}</div>
-            <Form data={formData} onSubmit={this.handleSubmit}>
+            <Form onFinish={this.onFinish} onFinishFailed={() => {}}>
               <Form.Item
                 rules={[
                   {

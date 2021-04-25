@@ -14,6 +14,8 @@ Feature
 - prettier
 - pre-commit, lint-staged
 - commitlint
+- unit test demo
+- e2e test demo
 
 Install yarn with npm:
 
